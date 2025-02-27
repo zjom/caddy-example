@@ -15,13 +15,17 @@ services:
       - caddy_config:/config
     depends_on:
       - backend
+    networks:
+      - caddy_net
 
   backend:
     build:
       context: ./app
-    ports:
-      - "8000:8000"
+    networks:
+      - caddy_net
 
 volumes:
   caddy_data:
   caddy_config:
+networks:
+  caddy_net:

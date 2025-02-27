@@ -11,8 +11,6 @@ RUN --mount=type=cache,target=/go/pkg/mod \
 
 COPY . .
 
-ENV CGO_ENABLED=0
-
 RUN go build \
     -ldflags="-linkmode external -extldflags -static" \
     -tags netgo \

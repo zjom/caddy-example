@@ -10,9 +10,11 @@ func main() {
 	e := echo.New()
 
 	e.GET("/", func(c echo.Context) error {
+		e.Logger.Info(c.Request())
 		return c.JSON(http.StatusOK, map[string]string{"key": "value"})
 	})
 	e.GET("/health", func(c echo.Context) error {
+		e.Logger.Info(c.Request())
 		return c.NoContent(200)
 	})
 

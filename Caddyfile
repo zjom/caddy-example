@@ -1,8 +1,9 @@
 zihanjin.com {
-    handle_path /api/* {
-        reverse_proxy localhost:8000
-    }
+  redir www.{host}{uri}
+}
 
+www.zihanjin.com {
     root * /srv
+    reverse_proxy /api/* localhost:8000
     file_server
 }

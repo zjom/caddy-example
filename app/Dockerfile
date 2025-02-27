@@ -29,7 +29,7 @@ COPY --from=builder /app/server /server
 USER nonroot
 
 # Expose the application port
-EXPOSE 80
+EXPOSE 8000
 
 # Define the command to run the application
 CMD ["/server"]

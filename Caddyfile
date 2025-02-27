@@ -1,6 +1,6 @@
 zihanjin.com {
     handle_path /api/* {
-        reverse_proxy localhost:80
+        reverse_proxy localhost:8000
     }
 
     root * /srv

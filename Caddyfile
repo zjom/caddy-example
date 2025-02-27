@@ -1,0 +1,6 @@
+zihanjin.com {
+reverse_proxy /api/* localhost:1323
+
+root * srv
+file_server
+}

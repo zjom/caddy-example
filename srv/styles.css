@@ -1,0 +1,7 @@
+:root {
+    --bg-base: #313244
+}
+* {
+    background: var(--bg-base);
+}
+

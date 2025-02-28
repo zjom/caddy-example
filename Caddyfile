@@ -4,6 +4,11 @@ zihanjin.com {
 
 www.zihanjin.com {
     root * /srv
-    reverse_proxy /api/* http://127.0.0.1:8000
+    handle_path /api/* {
+        reverse_proxy backend:8000
+    }
+
+    respond /health 200
+
     file_server
 }

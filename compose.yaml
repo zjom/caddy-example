@@ -23,6 +23,7 @@ services:
       context: ./app
     networks:
       - caddy_net
+    container_name: backend
 
 volumes:
   caddy_data:
